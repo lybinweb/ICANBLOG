@@ -3,38 +3,40 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 主题版的Demo
-subtitle: 副标题
-description: '描述'
-keywords: 关键词1,关键词2
-author: 作者
+title: ICAN Blog
+subtitle: '总有一天，你会站在最亮的地方，活成自己曾经渴望的模样。'
+description: '思考、总结、分享'
+keywords:
+author: ICAN
 language: zh-CN
-timezone: 'Asia/Shanghai'
-email:
+timezone: ''
+
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://lybinweb.github.io/
-root: /
-permalink: posts/:abbrlink/index.html
-permalink_defaults:
-pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# ##### 文章显示URL设置 #####
+# permalink: :year/:month/:day/:title/
+# permalink_defaults:
+# pretty_urls:
+#   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+#   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# http://localhost:4000/post/24caea6b.html
+permalink: post/:abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex
 
 # Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
-  - '404/index.html'
-  - '404.html'
-  - 'CNAME'
-  - 'now.json'
-  - 'robots.txt'
+source_dir: source          # 资源文件夹，这个文件夹用来存放写的博客内容。
+public_dir: public          # 公共文件夹，这个文件夹用于存放生成的站点文件。
+tag_dir: tags               # 标签文件夹
+archive_dir: archives       # 归档文件夹
+category_dir: categories    # 分类文件夹
+code_dir: downloads/code    # Include code 文件夹，source_dir 下的子目录
+i18n_dir: :lang             # 国际化（i18n）文件夹
+skip_render:  
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -61,21 +63,15 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
-#本地搜索
-search:
-  path: search.xml
-  field: post
-  content: true
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
-#searchFile: "https://cdn.jsdelivr.net/gh/sviptzk/sviptzk.github.io@master/search.xml"
 index_generator:
   path: ''
-  per_page: 9
+  per_page: 10
   order_by: -date
-  pagination_dir: page
 
 # Category & Tag
 default_category: uncategorized
@@ -92,8 +88,8 @@ meta_generator: true
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
-## Use post's date for updated date unless set in front-matter
-updated_option: false
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -109,67 +105,9 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Butterfly
-#插件
-# hexo-baidu-url-submit  百度主动推送
-baidu_url_submit:
-  count: 1000 ## 提交最新的一个链接
-  host: ## 在百度站长平台中注册的域名
-  token: ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
-  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
-  xz_appid: ## 你的熊掌号 appid
-  xz_token: ## 你的熊掌号 token
-  xz_count: 10 ## 从所有的提交的数据当中选取最新的10条,该数量跟你的熊掌号而定
-#永久链接
-abbrlink:
-  alg: crc32 #算法 crc16(default) and crc32
-  rep: hex #进制 dec(default) and hex 十进制和十六进制，默认为10进制。
-# 外链跳转
-hexo_external_link:
-  enable: false
-  enable_base64_encode: true
-  url_param_name: 'u'
-  html_file_name: 'go.html'
-  target_blank: true
-  link_rel: 'external nofollow noopener noreferrer'
-  domain: '' # 如果开启了防盗链
-  safety_chain: true
-# 图片懒加载
-lazyload:
-  enable: false # 是否开启图片懒加载
-  onlypost: true # 是否只对文章的图片做懒加载
-  loadingImg: /img/loading.gif #显示的图片
-#文章隐藏
-hide_posts:
-  # 可以改成其他你喜欢的名字
-  filter: hidden
-  # 指定你想要传递隐藏文章的 generator，比如让所有隐藏文章在存档页面可见
-  # 常见的 generators 有：index, tag, category, archive, sitemap, feed, etc.
-  public_generators: [category, tag, archive, sitemap, xml, txt]
-  #public_generators: []
-  # 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录
-  noindex: true
+theme: next
 
-#中文转拼音
-permalink_pinyin:
-  enable: true #是否开启
-  separator: '-' # default: '-'链接符
 # Deployment
-
-# rss订阅
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-#aplayer插件 https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md
-aplayer:
-  script_dir: https://cdn1.tianli0.top/npm/kang-static/Hexo/assets/js # Public 目录下脚本目录路径，默认: 'assets/js'
-  style_dir: https://cdn1.tianli0.top/npm/kang-static/Hexo/assets/css # Public 目录下样式目录路径，默认: 'assets/css'
-  cdn: https://cdn1.tianli0.top/npm/kang-static/Hexo/assets/js/APlayer.min.js # 引用 APlayer.js 外部 CDN 地址 (默认不开启)
-  style_cdn: https://cdn1.tianli0.top/npm/kang-static/Hexo/assets/css/APlayer.min.css # 引用 APlayer.css 外部 CDN 地址 (默认不开启)
-  meting: true # MetingJS 支持
-  meting_cdn: https://cdn1.tianli0.top/npm/kang-static/Hexo/assets/js/Meting.min.js # 引用 Meting.js 外部 CDN 地址 (默认不开启)
-  asset_inject: false # 自动插入 Aplayer.js 与 Meting.js 资源脚本, 默认开启
-
-## Docs: https://hexo.io/docs/deployment.html
+## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
+  type: ''
