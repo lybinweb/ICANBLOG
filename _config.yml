@@ -3,14 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 主题版的Demo
-subtitle: 副标题
-description: '描述'
-keywords: 关键词1,关键词2
-author: 作者
+title: ICAN Blog
+subtitle: '总有一天，你会站在最亮的地方，活成自己曾经渴望的模样。'
+description: '思考、总结、分享'
+keywords: 成长,记录,分享
+author: ICAN
 language: zh-CN
-timezone: 'Asia/Shanghai'
-email:
+timezone: 'Asia/BeiJing'
+email: 1327899779@qq.com
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://lybinweb.github.io/
@@ -51,7 +51,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: true
