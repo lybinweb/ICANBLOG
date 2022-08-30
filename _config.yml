@@ -4,8 +4,8 @@
 
 # Site
 title: ICAN Blog
-subtitle: '总有一天，你会站在最亮的地方，活成自己曾经渴望的模样。'
-description: '思考、总结、分享'
+subtitle: '思考、总结、分享'
+description: '总有一天，你会站在最亮的地方，活成自己曾经渴望的模样。'
 keywords: 成长,记录,分享
 author: ICAN
 language: zh-CN
@@ -93,7 +93,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## Use post's date for updated date unless set in front-matter
-updated_option: false
+updated_option: true
 
 # Pagination
 ## Set per_page to 0 to disable pagination
