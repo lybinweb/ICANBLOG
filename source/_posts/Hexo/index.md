@@ -1,5 +1,6 @@
 ---
 title: Hexo常用命令
+date: 2022-08-15 12:30:00
 tags:
   - Hexo常用命令
 categories:
