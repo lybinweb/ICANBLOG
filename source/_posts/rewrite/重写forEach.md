@@ -1,6 +1,5 @@
 ---
 title: 实现forEach
-date: 2022 0824
 tags:
   - JavaScript
   - 重写
