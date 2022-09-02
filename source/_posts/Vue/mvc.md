@@ -7,7 +7,7 @@ categories:
   - Vue
 description: MVC
 abbrlink: 5645c7b1
-date: 2022-08-31 00:00:00
+date: 2022-08-15 00:00:00
 updated: 2022-08-31 00:00:00
 ---
 

@@ -8,7 +8,7 @@ categories:
   - JavaScript
 description: 重写forEach
 abbrlink: 718b0317
-date: 2022-08-31 00:00:00
+date: 2022-08-23 00:00:00
 updated: 2022-08-31 00:00:00
 ---
 
