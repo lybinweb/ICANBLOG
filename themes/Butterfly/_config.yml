@@ -132,7 +132,7 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: false
+  enable: true
   subtitle: 'Page Not Found'
   background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
 
@@ -333,7 +333,7 @@ facebook_comments:
   user_id: # optional
   pageSize: 10 # The number of comments to show
   order_by: social # social/time/reverse_time
-  lang: zh_TW # Language en_US/zh_CN/zh_TW and so on
+  lang: zh_CN # Language en_US/zh_CN/zh_TW and so on
 
 # Twikoo
 # https://github.com/imaegoo/twikoo
@@ -414,7 +414,7 @@ crisp:
 messenger:
   enable: false
   pageID:
-  lang: zh_TW # Language en_US/zh_CN/zh_TW and so on
+  lang: zh_CN # Language en_US/zh_CN/zh_TW and so on
 
 # Footer Settings
 # --------------------------------------
@@ -806,7 +806,7 @@ aplayerInject:
 # position 彈窗位置
 # 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: false
+  enable: ture
   position: bottom-left
   bg_light: '#49b1f5' # The background color of Toast Notification in light mode
   bg_dark: '#1f1f1f' # The background color of Toast Notification in dark mode
@@ -852,6 +852,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css">
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
     # - <script src="xxxx"></script>
