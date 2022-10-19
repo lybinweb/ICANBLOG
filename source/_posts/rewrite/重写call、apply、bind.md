@@ -7,6 +7,8 @@ tags:
 categories:
   - JavaScript
 description: 重写call、apply、bind
+date: 2022-10-19 10:00:00
+updated: 2022-10-19 10:00:00
 ---
 
 ## 重写call

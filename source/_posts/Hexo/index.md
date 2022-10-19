@@ -5,7 +5,6 @@ tags:
 categories:
   - Hexo
 description: Hexo常用命令
-sticky: 1
 abbrlink: 24caea6b
 date: 2022-08-31 00:00:00
 updated: 2022-08-31 00:00:00

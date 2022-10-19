@@ -8,6 +8,8 @@ categories:
   - JavaScript
 description: 重写typeof
 abbrlink: 7b8bf196
+date: 2022-9-19 10:00:00
+updated: 2022-9-19 10:00:00
 ---
 
 ## typeof方法
